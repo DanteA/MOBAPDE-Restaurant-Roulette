@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        <!--GMaps API Key-->
+        AIzaSyDhwhyeqegV1LYtdoauDGisobTWxs4u6eo
+    </string>
+
+    <string name="foursquare_client_id" templateMergeStrategy="preserve" translatable="false">
+        <!--Foursquare Client ID-->
+        LCMZPVR5JO4GCBPE4WJ4E0PBVI5MGBSVP0PXBNCSQG0KUWFJ
+    </string>
+
+    <string name="foursquare_client_secret" templateMergeStrategy="preserve" translatable="false">
+        <!--Foursquare Client Secret-->
+        NTYS3AFWQJ33MJ1HGUUASR3X4THEEUPXWPAG0B0FJOKRG4OJ
+    </string>
+
+</resources>
