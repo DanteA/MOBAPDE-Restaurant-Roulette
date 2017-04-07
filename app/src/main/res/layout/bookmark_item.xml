@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/container_border"
+    android:padding="@dimen/container_padding">
+
+    <RelativeLayout
+        android:id="@+id/layout_bookmark_icon"
+        android:layout_alignParentLeft="true"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="@dimen/item_padding"
+        android:layout_centerInParent="true"
+        android:background="@drawable/icon_restaurant">
+
+        <ImageView
+            android:id="@+id/bookmark_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/bookmark_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/item_smaller_padding"
+        android:text="Restaurant Name"
+        android:textSize="@dimen/filter_accent_text_size"
+        android:textColor="@color/titleTextColor"
+        android:scrollHorizontally="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:id="@+id/bookmark_rate_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/bookmark_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/accentTextColor"
+            android:text="4"
+            android:textSize="@dimen/rate_text_size"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/accentTextColor"
+            android:layout_below="@id/bookmark_rate"
+            android:layout_alignParentRight="true"
+            android:text="stars"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bookmark_address"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/bookmark_rate_container"
+        android:layout_below="@id/bookmark_name"
+        android:padding="@dimen/item_smaller_padding"
+        android:text="Restaurant Address"
+        android:gravity="center_vertical"
+        android:textColor="@color/accentTextColor"
+        android:scrollHorizontally="true"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+
+
+
+
+
+
+</RelativeLayout>

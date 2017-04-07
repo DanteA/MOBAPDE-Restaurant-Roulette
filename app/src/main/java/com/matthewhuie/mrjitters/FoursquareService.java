@@ -7,6 +7,8 @@
 
 package com.matthewhuie.mrjitters;
 
+import com.matthewhuie.mrjitters.FoursquareJSON;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -21,6 +23,7 @@ public interface FoursquareService {
                                      @Query("llAcc") double llAcc);
 
     // A request to search for nearby coffee shop recommendations via the Foursquare API.
+    // TODO: change intent to restaurants
     @GET("search/recommendations?v=20161101&intent=coffee")
     Call<FoursquareJSON> searchCoffee(@Query("client_id") String clientID,
                                       @Query("client_secret") String clientSecret,

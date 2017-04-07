@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:text="TITLE"
+        android:textColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:id="@+id/Title"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/Info"
+        android:gravity="center_horizontal"
+        android:textSize="75px"/>
+
+    <TextView
+        android:text="INFO INFO INFO INFO INFO INFO INFO INFO INFO INFO INFO INFO"
+        android:textColor="@color/titleTextColor"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:id="@+id/Info"
+        android:layout_below="@+id/Title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
+
+    <Button
+        android:text="Locate!"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Info"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:padding="@dimen/item_padding"
+        android:id="@+id/info_select"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:background="@drawable/button_curved"/>
+
+    <Button
+        android:text="Bookmark"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_select"
+        android:layout_alignParentLeft="true"
+        android:padding="@dimen/item_padding"
+        android:id="@+id/info_bookmark"
+        android:background="@drawable/button_curved"/>
+
+    <Button
+        android:text="Spin Again!"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_select"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/item_padding"
+        android:id="@+id/info_spin_again"
+        android:background="@drawable/button_curved"/>
+
+</RelativeLayout>

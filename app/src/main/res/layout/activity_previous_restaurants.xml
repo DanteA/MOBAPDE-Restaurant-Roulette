@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primaryBackground"
+    tools:context="com.matthewhuie.mrjitters.PreviousRestaurantActivity">
+
+    <!-- SHOW PREV RESTAURANTS-->
+    <TextView
+        android:layout_marginTop="@dimen/filter_container_spacing"
+        android:padding="@dimen/filter_container_item_spacing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/titleTextColor"
+        android:text="Hide Week's Previous Restaurant "/>
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:id="@+id/filter_previous_week"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/filter_container_item_spacing"
+        android:background="@drawable/container_border">
+        <TextView
+            android:textColor="@color/subTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Week Number"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:id="@+id/prevWeekIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/filter_accent_text_size"
+            android:textColor="@color/accentTextColor"
+            android:text="Show All"
+            android:layout_alignParentRight="true"/>
+        <SeekBar
+            android:padding="@dimen/item_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prevWeekIndicator"
+            android:id="@+id/prevWeekSeekBar" />
+    </RelativeLayout>
+
+    <!-- -->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/previous_restaurant_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
+
+
+
+</LinearLayout>

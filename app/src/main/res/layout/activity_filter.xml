@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primaryBackground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.matthewhuie.mrjitters.FilterActivity">
+
+    <TextView
+        android:layout_marginTop="@dimen/filter_container_spacing"
+        android:padding="@dimen/filter_container_item_spacing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/titleTextColor"
+        android:text="Location"/>
+    <LinearLayout
+        android:background="@drawable/start_container_border"
+        android:padding="@dimen/edit_text_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="@dimen/location_pin_size"
+            android:layout_height="@dimen/location_pin_size"
+            android:background="@drawable/icon_location_red_small"
+            android:layout_marginRight="@dimen/item_padding"/>
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/filter_location_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/accentTextColor"
+            android:textColorHint="@color/subTextColor"
+            android:textSize="@dimen/main_location_text_size"
+            android:inputType="text"
+            android:hint="Taft Ave"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/filter_container_item_spacing"
+        android:background="@drawable/container_border">
+        <TextView
+            android:textColor="@color/subTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search Radius"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:id="@+id/distanceIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/accentTextColor"
+            android:text="Any Distance"
+            android:textSize="@dimen/filter_accent_text_size"
+            android:layout_alignParentRight="true"/>
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/distanceIndicator"
+            android:id="@+id/distanceSeekBar" />
+    </RelativeLayout>
+
+    <!-- OPEN NOW -->
+    <TextView
+        android:padding="@dimen/filter_container_item_spacing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/filter_container_spacing"
+        android:textColor="@color/titleTextColor"
+        android:text="Details"/>
+    <Switch
+        android:background="@drawable/container_border"
+        android:padding="@dimen/item_padding"
+        android:text="Open Now"
+        android:textSize="@dimen/filter_accent_text_size"
+        android:textColor="@color/accentTextColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/openStatus"/>
+    <Switch
+        android:background="@drawable/container_border"
+        android:padding="@dimen/item_padding"
+        android:text="Show Bookmarks"
+        android:textSize="@dimen/filter_accent_text_size"
+        android:textColor="@color/accentTextColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/showBookmarks"/>
+    <!-- -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/filter_container_item_spacing"
+        android:background="@drawable/container_border">
+        <TextView
+            android:textColor="@color/subTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Min | Max Rating"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:id="@+id/ratingIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/filter_accent_text_size"
+            android:textColor="@color/accentTextColor"
+            android:text="5 Stars"
+            android:layout_alignParentRight="true"/>
+        <SeekBar
+            android:padding="@dimen/item_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ratingIndicator"
+            android:id="@+id/ratingSeekBar" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/filter_container_item_spacing"
+        android:background="@drawable/container_border">
+        <TextView
+            android:textColor="@color/subTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price Range"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:id="@+id/priceIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Any Price"
+            android:textColor="@color/accentTextColor"
+            android:textSize="@dimen/filter_accent_text_size"
+            android:layout_alignParentRight="true"/>
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/priceIndicator"
+            android:padding="@dimen/item_padding"
+            android:id="@+id/priceSeekBar" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/filter_container_spacing"
+        android:padding="@dimen/filter_container_item_spacing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tags"
+        android:textColor="@color/titleTextColor"/>
+
+    <RelativeLayout
+        android:background="@drawable/start_container_border"
+        android:padding="@dimen/edit_text_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/filter_tags_icon"
+            android:layout_gravity="center_vertical"
+            android:layout_width="@dimen/location_pin_size"
+            android:layout_height="@dimen/location_pin_size"
+            android:background="@drawable/icon_location_red_small"
+            android:layout_marginRight="@dimen/item_padding"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/filter_tags_icon"
+            android:layout_gravity="center"
+            android:id="@+id/filter_tags_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/subTextColor"
+            android:textSize="@dimen/filter_accent_text_size"
+            android:text = "Any Tags"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

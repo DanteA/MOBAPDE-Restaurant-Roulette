@@ -15,6 +15,10 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -25,7 +29,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity
+public class MapsActivity extends AppCompatActivity
         implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     // The Google Maps object.
@@ -41,8 +45,11 @@ public class MapsActivity extends FragmentActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        getActionBar().setHomeButtonEnabled(true);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar actionbar = (ActionBar) getSupportActionBar();
+        actionbar.setHomeButtonEnabled(true);
+        actionbar.setDisplayHomeAsUpEnabled(true);
+        //getActionBar().setHomeButtonEnabled(true);
+        //getActionBar().setDisplayHomeAsUpEnabled(true);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -50,10 +57,10 @@ public class MapsActivity extends FragmentActivity
 
         // Retrieves venues details from the intent sent from PlacePickerActivity
         Bundle venue = getIntent().getExtras();
-        venueID = venue.getString("ID");
-        venueName = venue.getString("name");
-        venueLatitude = venue.getDouble("latitude");
-        venueLongitude = venue.getDouble("longitude");
+        venueID = venue.getString(Pop.VENUE_ID);
+        venueName = venue.getString(Pop.VENUE_NAME);
+        venueLatitude = venue.getDouble(Pop.VENUE_LAT);
+        venueLongitude = venue.getDouble(Pop.VENUE_LONG);
         setTitle(venueName);
     }
 

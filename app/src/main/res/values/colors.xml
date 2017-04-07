@@ -14,4 +14,11 @@
     <color name="FSQLime">#C5DE35</color>
     <color name="FSQGuacamole">#73CF42</color>
     <color name="FSQKale">#00B551</color>
+
+    <color name="primaryBackground">#DFDFDF</color>
+    <color name="titleTextColor">#000</color>
+    <color name="subTextColor">#a2a2a2</color>
+    <color name="accentTextColor">#FF4081</color>
+
+    <color name="toolBarPrimaryText">#fff</color>
 </resources>

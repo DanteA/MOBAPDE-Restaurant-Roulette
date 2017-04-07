@@ -78,7 +78,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     startActivity(i);
                 } else {
                     // Notifies the user if there are insufficient location permissions
-                    Toast.makeText(getApplicationContext(), "Mr. Jitters is missing permissions to access your location!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Mr. Nouger is missing permissions to access your location!", Toast.LENGTH_LONG).show();
                 }
             }
         });

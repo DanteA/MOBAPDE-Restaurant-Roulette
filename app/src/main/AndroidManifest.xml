@@ -10,7 +10,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name="android.support.multidex.MultiDexApplication">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,9 +19,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".RouletteActivity"
+            android:parentActivityName=".MainActivity" >
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
         <activity
             android:name=".PlacePickerActivity"
-            android:label="☕">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Mr Nouger ☕">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.matthewhuie.mrjitters.MainActivity" />
@@ -40,6 +51,43 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.matthewhuie.mrjitters.PlacePickerActivity" />
+        </activity>
+
+        <activity android:name=".FilterActivity"
+            android:parentActivityName="com.matthewhuie.mrjitters.PlacePickerActivity" >
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.matthewhuie.mrjitters.PlacePickerActivity" />
+        </activity>
+
+        <activity android:name=".PreviousRestaurantActivity"
+            android:parentActivityName="com.matthewhuie.mrjitters.PlacePickerActivity" >
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.matthewhuie.mrjitters.PlacePickerActivity" />
+        </activity>
+
+        <activity android:name=".BookmarkActivity"
+            android:parentActivityName="com.matthewhuie.mrjitters.PlacePickerActivity" >
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.matthewhuie.mrjitters.PlacePickerActivity" />
+        </activity>
+
+        <activity android:name=".TagListActivity"
+            android:parentActivityName=".FilterActivity" >
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FilterActivity" />
+        </activity>
+
+        <activity android:name=".Pop"
+            android:theme="@style/AppTheme">
+
         </activity>
     </application>
 
